@@ -1,21 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Eva 1 Back End{% endblock %}</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="{% url 'bcrama1:v1' %}">Vista 1</a></li>
-            <li><a href="{% url 'bcrama1:v2' %}">Vista 2</a></li>
-        </ul>
-    </nav>
-    {% block content %}
-    {% endblock %}
-    <footer>
-        <p>&copy; 2023 Mi Proyecto</p>
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="brand">Mi Proyecto</div>
+            <ul class="nav-links">
+                <li><a href="{% url 'bcrama1:v1' %}">Bcrama1 · V1</a></li>
+                <li><a href="{% url 'bcrama1:v2' %}">Bcrama1 · V2</a></li>
+                <li><a href="{% url 'bcrama2:v1' %}">Bcrama2 · V1</a></li>
+                <li><a href="{% url 'bcrama2:v2' %}">Bcrama2 · V2</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Proyecto BC</p>
     </footer>
 </body>
 </html>

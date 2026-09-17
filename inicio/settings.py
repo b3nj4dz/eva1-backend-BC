@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bcrama1'
+    'bcrama1',
+    'bcrama2'
 ]
 
 MIDDLEWARE = [
