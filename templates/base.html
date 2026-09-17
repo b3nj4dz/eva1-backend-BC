@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Eva 1 Back End{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{% url 'bcrama1:v1' %}">Vista 1</a></li>
+            <li><a href="{% url 'bcrama1:v2' %}">Vista 2</a></li>
+        </ul>
+    </nav>
+    {% block content %}
+    {% endblock %}
+    <footer>
+        <p>&copy; 2023 Mi Proyecto</p>
+    </footer>
+</body>
+</html>
